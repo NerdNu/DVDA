@@ -26,9 +26,9 @@ Configuration
      week, beginning with a capital letter, e.g. `Mon`.
    * The schedule listed under `schedule.default` applies to any day of the
      week for which there is no specific schedule for that day.
-     * For instance, `[examples/config.yml](https://raw.github.com/NerdNu/DVDA/master/examples/config.yml)`
-       defines a default schedule that is overridden on Sundays only.
-   * A schedule is a list of strings of the form `<time> <view-distance>`,
+     * For instance, [`examples/config.yml`](https://raw.github.com/NerdNu/DVDA/master/examples/config.yml)
+       defines a `default` schedule that is overridden on Sundays only.
+   * A schedule is a list of strings of the form `'<time> <view-distance>'`,
      where `<time>` is a time of the form `HH:mm` or `HH:mm:ss` and 
      `<view-distance>` is just the integer view distance to use after that 
      time.
@@ -46,13 +46,12 @@ Commands
    with specific overrides.
  * `/view-distance` - Show the current configured view distance in all worlds
    where the view distance is set to be adjusted, and if a view distance
-   adjustment is schedule between the server start time and the current time,
-   show the new view distance.
-   * If the server stops immediately after `/view-distance` is run, then
-     the command will return the new view distance that will be set.  However,
-     it does not take into account any pending view distance adjustments that
-     are still in the future (remember, DVDA does not know the server's restart
-     schedule).
+   adjustment is scheduled between the server start time and the current time,
+   show the new view distance.  If the server stops immediately after 
+   `/view-distance` is run, then the command will return the new view 
+   distance that will be set.  However, it does not take into account any 
+   pending view distance adjustments that are still in the future (remember, 
+   DVDA does not know the server's restart schedule).
 
 
 Permissions
