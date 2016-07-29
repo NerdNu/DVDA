@@ -1,0 +1,30 @@
+name: ${project.name}
+version: ${project.version}
+author: totemo
+authors: [totemo]
+description: ${project.description}
+website: ${project.url}
+main: nu.nerd.dvda.DVDA
+
+permissions:
+  dvda.admin:
+    description: Permission to administer the plugin.
+    default: op
+  dvda.viewdistance:
+    description: Permission to query the view distance.
+    default: op
+
+commands:
+  dvda:
+    description: ${project.name} administrative command.
+    permission: dvda.admin
+    usage: |
+      /<command> help: Show usage help.
+      /<command> reload: Reload the configuration.
+      /<command> list-all: List all schedules.
+
+  view-distance:
+    description: Query the current and next view distance.
+    permission: dvda.viewdistance
+    usage: |
+      /<command>: Query the current and next view distance.

@@ -1,0 +1,7 @@
+debug:
+  config: false
+
+schedule: {}
+
+worlds:
+- world
